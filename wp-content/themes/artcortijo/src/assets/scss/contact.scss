@@ -1,0 +1,22 @@
+section.contact {
+  text-align: center;
+  h3 {
+    font-size: 2rem;
+    text-transform: initial;
+  }
+  a {
+    display: inline-block;
+    &:hover {
+      svg {
+        fill: #0177b5;
+      }
+    }
+    svg {
+      width: 148px;
+      height: 38px;
+      fill: var(--color2);
+      transform: translateY(6px);
+      transition: fill $color-theme;
+    }
+  }
+}

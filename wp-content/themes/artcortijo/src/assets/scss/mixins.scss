@@ -1,0 +1,133 @@
+// @function breakpoint($key) {
+//   @if not map-has-key($query, $key) {
+//     @warn "Breakpoint #{$key} not found.";
+//   }
+//   @return map-get($query, $key);
+// }
+
+// @mixin breakpoint($value) {
+//   @media (max-width: #{breakpoint($value)}px) {
+//     @content;
+//   }
+// }
+
+// @mixin breakpoint-up($value) {
+//   @media (min-width: #{breakpoint($value)+1}px) {
+//     @content;
+//   }
+// }
+
+@mixin breakpoint-above($breakpoint) {
+  // If the breakpoint exists in the map.
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Get the breakpoint value.
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    // Write the media query.
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+    // If the breakpoint doesn't exist in the map.
+  } @else {
+    // Log a warning.
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+@mixin breakpoint-below($breakpoint) {
+  // If the breakpoint exists in the map.
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Get the breakpoint value.
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    // Write the media query.
+    @media (max-width: ($breakpoint-value - 1)) {
+      @content;
+    }
+    // If the breakpoint doesn't exist in the map.
+  } @else {
+    // Log a warning.
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+@mixin beakpoint-between($lower, $upper) {
+  // If both the lower and upper breakpoints exist in the map.
+  @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
+    // Get the lower and upper breakpoints.
+    $lower-breakpoint: map-get($breakpoints, $lower);
+    $upper-breakpoint: map-get($breakpoints, $upper);
+    // Write the media query.
+    @media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+      @content;
+    }
+    // If one or both of the breakpoints don't exist.
+  } @else {
+    // If lower breakpoint is invalid.
+    @if (map-has-key($breakpoints, $lower) == false) {
+      // Log a warning.
+      @warn 'Your lower breakpoint was invalid: #{$lower}.';
+    }
+    // If upper breakpoint is invalid.
+    @if (map-has-key($breakpoints, $upper) == false) {
+      // Log a warning.
+      @warn 'Your upper breakpoint was invalid: #{$upper}.';
+    }
+  }
+}
+
+//
+// Gradient system
+//
+$gradients: () !default;
+$gradients: map-merge(
+  (
+    chill: linear-gradient(135deg, #09e485 0%, #0291e3 100%),
+    warm: linear-gradient(135deg, #f2cd48 0%, #fd803f 100%),
+    hot: linear-gradient(135deg, #f9445a 0%, #fd803f 100%),
+    cold: linear-gradient(135deg, #8019c6 0%, #2f93cc 100%),
+    opt1: linear-gradient(135deg, var(--grad1) 0%, var(--grad2) 100%),
+    opt2: linear-gradient(135deg, #103783 0%, #9bafd9 100%),
+  ),
+  $gradients
+);
+
+@mixin border-gradient($parent, $gradient) {
+  #{$parent} {
+    border: 20px solid transparent;
+    border-width: 6px;
+    border-style: solid;
+    border-image: $gradient;
+    border-image-slice: 1;
+  }
+}
+
+// Gradient backgrounds
+@mixin bg-gradient($parent, $gradient) {
+  #{$parent} {
+    background: $gradient;
+  }
+}
+
+// Gradient text
+@mixin text-gradient($parent, $gradient) {
+  #{$parent} {
+    background-image: $gradient;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+// Gradient Classes
+@each $gradient, $value in $gradients {
+  @include bg-gradient('.bg-gradient-#{$gradient}', $value);
+}
+
+// Gradient Classes
+@each $gradient, $value in $gradients {
+  @include text-gradient('.text-gradient-#{$gradient}', $value);
+}
+
+// order Classes
+@each $gradient, $value in $gradients {
+  @include border-gradient('.border-gradient-#{$gradient}', $value);
+}

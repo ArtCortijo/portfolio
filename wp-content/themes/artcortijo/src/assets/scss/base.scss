@@ -1,0 +1,150 @@
+/* Fonts */
+$font-base: 'Montserrat', sans-serif;
+$font-headings: 'Source Sans Pro', sans-serif;
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-base;
+  color: var(--color2);
+  transition: color $color-theme;
+  transition-delay: 0 !important;
+}
+
+header {
+  // tmp
+  // height: 80px;
+}
+
+#site-banner,
+footer,
+.grid-content,
+.contact {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 40px;
+}
+
+.appear-up {
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+    .info__title {
+      &::after {
+        width: 100%;
+      }
+    }
+    .col-1 {
+      .anim-bkg {
+        &::before,
+        &::after {
+          transform: scaleY(1);
+        }
+      }
+    }
+  }
+  opacity: 0;
+  transform: translateY(70px);
+  transition: opacity $appear-time cubic-bezier(0, 0.22, 0.23, 1),
+    transform $appear-time cubic-bezier(0, 0.22, 0.23, 1);
+}
+
+.sep {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px 40px 0;
+}
+
+h1 {
+  font-size: 3.5rem;
+  word-break: break-all;
+  hyphens: auto;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  // word-break: break-all;
+  hyphens: auto;
+}
+
+p {
+  line-height: 1.4;
+}
+
+dt {
+  font-weight: initial;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+li {
+  ul {
+    list-style-type: circle;
+  }
+}
+
+.clearfix {
+  &:before,
+  &:after {
+    display: table;
+    content: '';
+  }
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: ' ';
+    clear: both;
+    height: 0;
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.visually-hidden a:focus,
+.visually-hidden input:focus,
+.visually-hidden button:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  clip: auto;
+  overflow: visible;
+}

@@ -1,0 +1,88 @@
+.banner {
+  position: relative;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0);
+  transition: box-shadow 0.5s;
+  &.active {
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.3);
+  }
+  .border-top {
+    position: absolute;
+    content: '';
+    top: -6px;
+    right: -6px;
+    width: calc(100% + 12px);
+    height: 6px;
+    z-index: 4;
+    background-color: $white;
+    transform-origin: top right;
+    transition: transform 1s;
+    &.active {
+      transform: scaleX(0);
+    }
+  }
+  .border-right {
+    position: absolute;
+    content: '';
+    top: -6px;
+    right: -6px;
+    height: calc(100% + 12px);
+    width: 6px;
+    z-index: 3;
+    background-color: $white;
+    transform-origin: bottom right;
+    transition: transform 1s;
+    &.active {
+      transform: scaleY(0);
+    }
+  }
+  .border-bottom {
+    position: absolute;
+    content: '';
+    bottom: -6px;
+    right: -6px;
+    width: calc(100% + 12px);
+    height: 6px;
+    z-index: 2;
+    background-color: $white;
+    transform-origin: bottom left;
+    transition: transform 1s;
+    &.active {
+      transform: scaleX(0);
+    }
+  }
+  .border-left {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -6px;
+    height: calc(100% + 6px);
+    width: 6px;
+    z-index: 1;
+    background-color: $white;
+    transform-origin: top left;
+    transition: transform 1s;
+    &.active {
+      transform: scaleY(0);
+    }
+  }
+  .appear {
+    transform: translateX(-50px);
+    opacity: 0;
+    // transition: transform 1s ease-in, opacity 1s ease-in;
+  }
+  &__wrapper {
+    height: 500px;
+    display: flex;
+    align-items: center;
+  }
+  h1 {
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  h2 {
+    margin-bottom: 40px;
+  }
+  .description {
+    width: 75%;
+  }
+}

@@ -1,0 +1,19 @@
+// Dimensions
+$dot-size: 1px;
+$dot-space: 75px;
+
+body {
+  background: var(--bg2);
+  #page {
+    background: linear-gradient(
+          90deg,
+          var(--bg2) ($dot-space - $dot-size),
+          transparent 1%
+        )
+        center,
+      linear-gradient(var(--bg2) ($dot-space - $dot-size), transparent 1%)
+        center,
+      var(--color1);
+    background-size: $dot-space $dot-space;
+  }
+}
