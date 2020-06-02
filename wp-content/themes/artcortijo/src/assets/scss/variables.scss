@@ -10,8 +10,9 @@ html {
   --bg1: #f0f0f0;
   --color2: #272727;
   --color1: #ffa581;
-  --grad1: #f9b16e;
-  --grad2: #f68080;
+  --grad1: #f9a66e;
+  // --grad2: #f68080;
+  --grad2: #f16f6f;
 }
 
 html[data-theme='dark'] {
@@ -23,6 +24,7 @@ html[data-theme='dark'] {
   --grad2: #0291e3;
 }
 
+$linkedin: #0177b5;
 // Dark Theme Colors
 $dark-four: #232931;
 $dark-three: #393e46;

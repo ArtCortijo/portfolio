@@ -5,7 +5,7 @@ const intersectionAnim = () => {
   const options = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.1,
+    threshold: 0.15,
   };
 
   const animatedElements = [];
@@ -16,7 +16,7 @@ const intersectionAnim = () => {
       setTimeout(() => {
         e.classList.add('active');
         res();
-      }, 700);
+      }, 100);
     });
   }
 
@@ -39,6 +39,7 @@ const intersectionAnim = () => {
     observer.observe(section);
   });
 
+  // Banner Appear
   const borders = document.querySelectorAll('.banner__anim');
   const animBanner = () => {
     borders.forEach((border) => {
@@ -66,6 +67,7 @@ const intersectionAnim = () => {
     }
   });
   bannerObserver.observe(myImg);
+  // End Banner
 };
 
 export default intersectionAnim;

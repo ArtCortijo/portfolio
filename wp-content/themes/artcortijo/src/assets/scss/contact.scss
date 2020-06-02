@@ -4,11 +4,11 @@ section.contact {
     font-size: 2rem;
     text-transform: initial;
   }
-  a {
-    display: inline-block;
+  .link {
+    transform: translate(-5px, 18px);
     &:hover {
       svg {
-        fill: #0177b5;
+        fill: $linkedin;
       }
     }
     svg {

@@ -1,0 +1,75 @@
+.link {
+  position: relative;
+  color: inherit;
+  &.border {
+    display: inline-block;
+    overflow: hidden;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background: $linkedin;
+      transition: transform 0.2s ease;
+    }
+    &:before {
+      width: 100%;
+      height: 2px;
+      transform: translateX(0);
+      transition-delay: 0.8s;
+    }
+    &:after {
+      width: 2px;
+      height: 100%;
+      transform: translateY(100%);
+      transition-delay: 0.5s;
+    }
+    span {
+      position: relative;
+      color: inherit;
+      display: block;
+      padding: 5px 10px;
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: $linkedin;
+        transition: transform 0.2s ease;
+      }
+      &:before {
+        width: 100%;
+        height: 2px;
+        transform: translateX(100%);
+        transition-delay: 0.2s;
+      }
+      &:after {
+        width: 2px;
+        height: 100%;
+        transform: translateY(-100%);
+        transition-delay: 0s;
+      }
+    }
+    &:hover:before,
+    &:hover:after,
+    &:hover > span:before,
+    &:hover > span:after {
+      transform: translate(0, 0);
+    }
+
+    // &:hover:before {
+    //   transition-delay: 0s;
+    // }
+    &:hover:after {
+      transition-delay: 0s;
+    }
+    &:hover > span:before {
+      transition-delay: 0.2s;
+    }
+    &:hover > span:after {
+      transition-delay: 0.5s;
+    }
+  }
+}

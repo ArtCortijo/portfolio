@@ -20,18 +20,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<!-- <div id="intro-overlay">
-	<div class="anim-wrapper">
-		<span class="glitch" data-text="Hola">Hola</span>
-	</div>
-	<div class="text">
-    <span class="pseudo">Sliced</span>
-    <span data-text="Sliced" class="part"></span>
-    <span data-text="Sliced" class="part"></span>
-	</div>
-</div> -->
-
-<div id="intro-overlay"></div>
+<div class="intro-anim"></div>
 
 <body <?php body_class(); ?>>
 	<div id="page" class="site">

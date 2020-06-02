@@ -15,9 +15,10 @@ body {
   transition-delay: 0 !important;
 }
 
-header {
-  // tmp
-  // height: 80px;
+header,
+main {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #site-banner,

@@ -1,5 +1,5 @@
 import './main.scss';
-// import { introAnim, outroAnim } from './assets/js/introAnim';
+import { introAnim } from './assets/js/introAnim';
 import objectFitImages from 'object-fit-images';
 import intersectionAnim from './assets/js/intersectionObserver';
 import colorTheme from './assets/js/colorTheme';
@@ -15,16 +15,15 @@ import colorTheme from './assets/js/colorTheme';
 // document.body.appendChild(component());
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('ok go');
   // Handler when the DOM is fully loaded
-  // if (sessionStorage.getItem('animIntro') === null) {
-  //   sessionStorage.setItem('animIntro', 'viewed');
-  //   introAnim();
-  // } else {
-  //   outroAnim();
-  // }
+  if (sessionStorage.getItem('animIntro') === null) {
+    sessionStorage.setItem('animIntro', 'viewed');
+    introAnim();
+  } else {
+    document.body.removeChild(document.querySelector('.intro-anim'));
+    intersectionAnim();
+  }
   // sessionStorage.clear();
   colorTheme();
   objectFitImages();
-  intersectionAnim();
 });

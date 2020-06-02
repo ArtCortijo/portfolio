@@ -19,6 +19,7 @@ get_header();
   <main id="main" class="site-main">
     <?php while ( have_posts() ) : the_post(); ?>
       <?php get_template_part( 'template-parts/content', 'banner' ); ?>
+      <?php get_template_part( 'template-parts/content', 'scroller' ); ?>
       <div class="appear-up sep"><h2>À propos de moi</h2></div>
       <div class="grid-content col-2">
         <?php get_template_part( 'template-parts/content', 'experience' ); ?>
