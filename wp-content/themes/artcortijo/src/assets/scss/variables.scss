@@ -7,7 +7,7 @@ $color-theme: 0.75s ease;
 
 html {
   --bg2: #ffffff;
-  --bg1: #f0f0f0;
+  --bg1: #f7f7f7;
   --color2: #272727;
   --color1: #ffa581;
   --grad1: #f9a66e;
@@ -46,6 +46,7 @@ $breakpoints: (
   sm: 768px,
   md: 1024px,
   lg: 1200px,
+  xlg: 1440px,
 );
 
 // $breakpoints: (

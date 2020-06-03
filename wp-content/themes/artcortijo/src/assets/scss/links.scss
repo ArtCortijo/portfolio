@@ -58,10 +58,6 @@
     &:hover > span:after {
       transform: translate(0, 0);
     }
-
-    // &:hover:before {
-    //   transition-delay: 0s;
-    // }
     &:hover:after {
       transition-delay: 0s;
     }

@@ -16,23 +16,23 @@ module.exports = merge(common, {
   },
   optimization: {
     minimizer: [
-      new TerserJSPlugin({}), 
+      new TerserJSPlugin({}),
       new OptimizeCSSAssetsPlugin({}),
       new HtmlWebpackPlugin({
         minify: {
           removeAttributeQuotes: true,
           collapseWhitespace: true,
-          removeComments: true
-        }
+          removeComments: true,
+        },
       }),
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin({ filename: "[name].css" }),
+    new MiniCssExtractPlugin({ filename: '[name].css' }),
     new CleanWebpackPlugin(),
     new webpack.ProvidePlugin({
       $: 'jquery',
-      jQuery: 'jquery'
+      jQuery: 'jquery',
     }),
   ],
   module: {
@@ -42,6 +42,7 @@ module.exports = merge(common, {
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
+          'postcss-loader',
           'sass-loader',
         ],
       },

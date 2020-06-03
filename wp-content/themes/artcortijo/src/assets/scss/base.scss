@@ -2,6 +2,13 @@
 $font-base: 'Montserrat', sans-serif;
 $font-headings: 'Source Sans Pro', sans-serif;
 
+// @include media-above(xlg) {
+//   display: none;
+// }
+// @include media-below(md) {
+//   display: block;
+// }
+
 *,
 *:before,
 *:after {
@@ -21,10 +28,9 @@ main {
   padding-right: 20px;
 }
 
-#site-banner,
-footer,
 .grid-content,
-.contact {
+.contact,
+footer {
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;

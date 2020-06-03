@@ -1,17 +1,17 @@
 // Dimensions
-$dot-size: 1px;
-$dot-space: 75px;
+$dot-size: 2px;
+$dot-space: 150px;
 
 body {
-  background: var(--bg2);
+  background: var(--bg1);
   #page {
     background: linear-gradient(
           90deg,
-          var(--bg2) ($dot-space - $dot-size),
+          var(--bg1) ($dot-space - $dot-size),
           transparent 1%
         )
         center,
-      linear-gradient(var(--bg2) ($dot-space - $dot-size), transparent 1%)
+      linear-gradient(var(--bg1) ($dot-space - $dot-size), transparent 1%)
         center,
       var(--color1);
     background-size: $dot-space $dot-space;
