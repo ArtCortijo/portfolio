@@ -162,3 +162,95 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Custom Post Type : Projects
+ */
+function projects_post_type() {
+ 
+	// Set UI labels for Custom Post Type
+	$labels = array(
+		'name'                => _x( 'Projects', 'Post Type General Name', 'artcortijo' ),
+		'singular_name'       => _x( 'Project', 'Post Type Singular Name', 'artcortijo' ),
+		'menu_name'           => __( 'Projects', 'artcortijo' ),
+		'parent_item_colon'   => __( 'Parent Project', 'artcortijo' ),
+		'all_items'           => __( 'All Projects', 'artcortijo' ),
+		'view_item'           => __( 'View Project', 'artcortijo' ),
+		'add_new_item'        => __( 'Add New Project', 'artcortijo' ),
+		'add_new'             => __( 'Add New', 'artcortijo' ),
+		'edit_item'           => __( 'Edit Project', 'artcortijo' ),
+		'update_item'         => __( 'Update Project', 'artcortijo' ),
+		'search_items'        => __( 'Search Project', 'artcortijo' ),
+		'not_found'           => __( 'Not Found', 'artcortijo' ),
+		'not_found_in_trash'  => __( 'Not found in Trash', 'artcortijo' ),
+	);
+			 
+	// Set other options for Custom Post Type
+	$args = array(
+		'label'               => __( 'Projects', 'artcortijo' ),
+		'description'         => __( "Project I've worked on", 'artcortijo' ),
+		'labels'              => $labels,
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields', ),
+		'taxonomies'          => array( 'genres' ),
+		'menu_icon'           => 'dashicons-desktop',
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 5,
+		'can_export'          => true,
+		'has_archive'         => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'post',
+		'show_in_rest' => true,
+	);
+			 
+	// Registering your Custom Post Type
+	register_post_type( 'projects', $args );
+}
+add_action( 'init', 'projects_post_type', 0 );
+
+
+// Disable Projects Post Type Comments
+add_action('admin_init', function () {
+	// Redirect any user trying to access comments page
+	global $pagenow;
+	
+	if ($pagenow === 'edit-comments.php') {
+			wp_redirect(admin_url());
+			exit;
+	}
+
+	// Remove comments metabox from dashboard
+	remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal');
+
+	// Disable support for comments and trackbacks in post types
+	foreach (get_post_types() as $post_type) {
+			if (post_type_supports($post_type, 'comments')) {
+					remove_post_type_support($post_type, 'comments');
+					remove_post_type_support($post_type, 'trackbacks');
+			}
+	}
+});
+
+// Close comments on the front-end
+add_filter('comments_open', '__return_false', 20, 2);
+add_filter('pings_open', '__return_false', 20, 2);
+
+// Hide existing comments
+add_filter('comments_array', '__return_empty_array', 10, 2);
+
+// Remove comments page in menu
+add_action('admin_menu', function () {
+	remove_menu_page('edit-comments.php');
+});
+
+// Remove comments links from admin bar
+function df_disable_comments_admin_bar() {
+	if (is_admin_bar_showing()) {
+		remove_action('admin_bar_menu', 'wp_admin_bar_comments_menu', 60);
+	}
+}
+add_action('admin_init', 'df_disable_comments_admin_bar');

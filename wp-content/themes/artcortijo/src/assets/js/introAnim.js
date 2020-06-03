@@ -82,10 +82,8 @@ export const introAnim = () => {
       ease: 'power2.inOut',
       onComplete: () => {
         document.body.classList.remove('animation');
-        setTimeout(() => {
-          animOverlay.parentNode.removeChild(animOverlay);
-          intersectionAnim();
-        }, 500);
+        animOverlay.parentNode.removeChild(animOverlay);
+        intersectionAnim();
       },
     });
 };

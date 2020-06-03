@@ -72,10 +72,16 @@ h1 {
   font-size: 3.5rem;
   word-break: break-all;
   hyphens: auto;
+  @include media-below(sm) {
+    font-size: 3rem;
+  }
 }
 
 h2 {
   font-size: 2.2rem;
+  @include media-below(sm) {
+    font-size: 2rem;
+  }
 }
 
 h3 {
