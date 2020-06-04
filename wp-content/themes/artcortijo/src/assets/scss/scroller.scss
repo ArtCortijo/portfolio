@@ -13,9 +13,9 @@
     height: 10px;
     margin: 0 auto;
     border-radius: 5px;
-    background-color: var(--color1);
+    background-color: var(--grad2);
     transform: translateY(20px);
-    animation: scrollDown 3s infinite;
+    animation: scrollDown 2.6s infinite;
   }
 }
 
@@ -29,15 +29,11 @@
   50% {
     transform: translateY(40px);
   }
-  80% {
-    opacity: 1;
-  }
-  90% {
+  70% {
     opacity: 0.5;
   }
   100% {
     height: 10px;
-    opacity: 1;
     transform: translateY(20px);
   }
 }

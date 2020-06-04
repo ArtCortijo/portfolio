@@ -6,6 +6,9 @@ section.contact {
   }
   .link {
     transform: translate(-5px, 18px);
+    @include media-below(sm) {
+      display: block;
+    }
     &:hover {
       svg {
         fill: $linkedin;
@@ -17,6 +20,9 @@ section.contact {
       fill: var(--color2);
       transform: translateY(6px);
       transition: fill $color-theme;
+      @include media-below(sm) {
+        fill: $linkedin;
+      }
     }
   }
 }

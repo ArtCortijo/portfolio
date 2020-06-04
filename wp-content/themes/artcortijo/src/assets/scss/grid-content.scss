@@ -1,8 +1,14 @@
 .grid-content {
   display: grid;
   grid-gap: 30px;
+  @include media-below(sm) {
+    display: block;
+  }
   &.col-2 {
     grid-template-columns: 1fr 1fr;
+    @include media-below(sm) {
+      grid-template-columns: none;
+    }
   }
   &.col-1 {
     grid-template-columns: 400px auto;

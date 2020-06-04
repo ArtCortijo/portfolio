@@ -212,6 +212,9 @@ function projects_post_type() {
 }
 add_action( 'init', 'projects_post_type', 0 );
 
+// Remove p tags from WYSIWYG
+remove_filter('the_content', 'wpautop');
+
 
 // Disable Projects Post Type Comments
 add_action('admin_init', function () {

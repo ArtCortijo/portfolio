@@ -1,8 +1,14 @@
 section {
   padding: 50px 0;
+  &.other-skills {
+    ul li {
+      margin-bottom: 10px;
+    }
+  }
   dt {
     position: relative;
     padding-left: 18px;
+    margin-bottom: 5px;
     &::before {
       position: absolute;
       content: '_';
@@ -25,6 +31,11 @@ section {
           align-items: center;
           color: $light-two;
           padding: 0 5px;
+          @include media-below(sm) {
+            padding: 10px 5px;
+            min-height: 100px;
+            margin-bottom: 30px;
+          }
         }
         .anim-bkg {
           position: relative;
@@ -57,11 +68,14 @@ section {
       }
     }
     &__title {
-      margin-bottom: 25px;
+      margin-bottom: 30px;
       padding-bottom: 5px;
       padding-bottom: 0px;
       width: 75%;
       position: relative;
+      @include media-below(sm) {
+        width: 100%;
+      }
       &:not(.anim-bkg) {
         &::after {
           position: absolute;
