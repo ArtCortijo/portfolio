@@ -92,7 +92,7 @@ $gradients: map-merge(
 
 @mixin border-gradient($parent, $gradient) {
   #{$parent} {
-    border: 20px solid transparent;
+    border: 20px solid;
     border-width: 6px;
     border-style: solid;
     border-image: $gradient;

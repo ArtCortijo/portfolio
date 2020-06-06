@@ -36,7 +36,10 @@ footer {
   margin: 0 auto;
   padding: 50px 40px;
 }
-
+.appear {
+  transform: translateX(-50px);
+  opacity: 0;
+}
 .appear-up {
   &.active {
     opacity: 1;

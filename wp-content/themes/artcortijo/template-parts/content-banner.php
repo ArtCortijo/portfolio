@@ -4,10 +4,11 @@
   <span class="banner__anim border-bottom"></span>
   <span class="banner__anim border-left"></span>
   <div class="banner__wrapper">
-    <div>
+    <div class="banner__info">
       <h1 class="appear text-gradient-opt1">Arturo Cortijo Purizaca</h1>
-      <h2 class="appear text-gradient-opt1">Développeur Front-End</h2>
-      <p class="appear description">Je suis développeur front-end depuis près de 6 ans maintenant et c'est quelque chose pour lequel j'ai développé une passion. Être créatif grâce au codage est ce qui m'inspire. Jusqu'à présent, j'ai eu la chance d'avoir travaillé sur de grands projets et avec des gens talentueux qui m'ont aidé à grandir en tant que développeur. Je suis méticuleux et dévoué à mon travail et je suis toujours à la recherche de nouvelles opportunités pour acquérir de nouvelles compétences.</p>
+      <h2 class="appear text-gradient-opt1"><?php _e('Développeur Front-End', 'artcortijo') ?></h2>
+      <p class="appear description"><?php the_content(); ?></p>
     </div>
+    <div class="banner__portrait appear-up"><?php echo file_get_contents( get_stylesheet_directory_uri() . '/dist/images/portrait.svg' ); ?></div>
   </div>
 </section>

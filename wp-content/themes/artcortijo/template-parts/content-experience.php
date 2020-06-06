@@ -6,7 +6,7 @@
     <p>Développeur Front-End, Montréal</p>
     <p>2014 - 2019</p>
 
-    <h4>Préposé au service à la clientèle</h4>
+    <h4>Représentant service à la clientèle</h4>
     <p>BMO Mastercard / BMO Diners, Montréal</p>
     <p>2010 - 2014</p>
 
