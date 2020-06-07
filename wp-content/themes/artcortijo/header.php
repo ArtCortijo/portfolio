@@ -25,34 +25,20 @@
 <body <?php body_class(); ?>>
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'artcortijo' ); ?></a>
-
 		<header id="masthead" class="site-header">
-			<div class="site-branding">
+			<nav id="site-navigation" class="art-header">
+				<a class="art-header__home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<span>Art</span>
+					<?php echo file_get_contents( get_stylesheet_directory_uri() . '/dist/images/portrait.svg' ); ?>
+				</a>
 				<?php
-				the_custom_logo();
-				if ( is_front_page() && is_home() ) :
-					?>
-					<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-					<?php
-				else :
-					?>
-					<!-- <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p> -->
-					<?php
-				endif; ?>
-			</div>
-			
-      <?php get_template_part( 'template-parts/content', 'color-theme' ); ?>
-
-			<!-- <nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'artcortijo' ); ?></button> -->
-				<?php
-				// wp_nav_menu( array(
-				// 	'theme_location' => 'primary-menu',
-				// 	'menu_id'        => 'main-menu',
-				// ) );
+				wp_nav_menu( array(
+					'theme_location' => 'primary-menu',
+					'menu_id'        => 'main-menu',
+				) );
 				?>
-			<!-- </nav> -->
-			
+			</nav>
+			<?php get_template_part( 'template-parts/content', 'color-theme' ); ?>
 		</header>
 
 		<div id="content" class="site-content">

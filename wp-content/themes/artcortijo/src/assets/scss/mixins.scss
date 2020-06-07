@@ -111,7 +111,7 @@ $gradients: map-merge(
 @mixin text-gradient($parent, $gradient) {
   #{$parent} {
     background-image: $gradient;
-    color: transparent;
+    color: rgba(255, 255, 255, 0);
     -webkit-background-clip: text;
     background-clip: text;
   }

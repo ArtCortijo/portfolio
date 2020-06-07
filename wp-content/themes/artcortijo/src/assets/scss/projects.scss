@@ -15,6 +15,8 @@ section.projects {
       display: block;
       width: 100%;
       margin-bottom: 30px;
+      min-height: 300px;
+      height: auto;
     }
     @include media-above(sm) {
       &:hover {
@@ -97,10 +99,6 @@ section.projects {
       transition: transform 0.5s ease;
       position: relative;
       z-index: 0;
-      @include media-below(sm) {
-        min-height: 300px;
-        height: auto;
-      }
     }
     &__info {
       position: absolute;

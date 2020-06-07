@@ -64,10 +64,11 @@ const intersectionAnim = () => {
       entry[0].intersectionRatio > 0
     ) {
       animBanner();
+      bannerObserver.unobserve(entry[0].target);
     }
   });
   bannerObserver.observe(myImg);
-  // End Banner
 };
+// End Banner
 
 export default intersectionAnim;

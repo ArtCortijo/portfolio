@@ -28,6 +28,7 @@ main {
   padding-right: 20px;
 }
 
+.site-header,
 .grid-content,
 .contact,
 footer {
@@ -35,6 +36,9 @@ footer {
   width: 100%;
   margin: 0 auto;
   padding: 50px 40px;
+  @include media-below(sm) {
+    padding: 40px 20px;
+  }
 }
 .appear {
   transform: translateX(-50px);
@@ -69,9 +73,13 @@ footer {
   width: 100%;
   margin: 0 auto;
   padding: 100px 40px 0;
+  @include media-below(sm) {
+    padding: 50px 20px 0;
+  }
 }
 
 h1 {
+  font-family: $font-headings;
   font-size: 3.5rem;
   word-break: break-all;
   hyphens: auto;
@@ -100,8 +108,8 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: $font-headings;
   text-transform: uppercase;
-  // word-break: break-all;
   hyphens: auto;
 }
 
@@ -121,6 +129,14 @@ li {
   ul {
     list-style-type: circle;
   }
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
 }
 
 .clearfix {

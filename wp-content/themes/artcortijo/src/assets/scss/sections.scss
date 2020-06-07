@@ -4,6 +4,9 @@ section {
     ul li {
       margin-bottom: 10px;
     }
+    li ul {
+      margin-top: 10px;
+    }
   }
   dt {
     position: relative;
@@ -12,8 +15,8 @@ section {
     &::before {
       position: absolute;
       content: '_';
-      top: 0;
-      left: 0;
+      top: -1px;
+      left: 5px;
     }
   }
   .info,
