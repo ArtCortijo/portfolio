@@ -20,7 +20,7 @@ get_header();
     <?php while ( have_posts() ) : the_post(); ?>
       <?php get_template_part( 'template-parts/content', 'banner' ); ?>
       <?php get_template_part( 'template-parts/content', 'scroller' ); ?>
-      <div class="appear-up sep"><h2>À propos de moi</h2></div>
+      <div class="appear-up sep"><h2><?php _e('À propos de moi','artcortijo'); ?></h2></div>
       <div class="grid-content col-2">
         <?php get_template_part( 'template-parts/content', 'experience' ); ?>
         <?php get_template_part( 'template-parts/content', 'education' ); ?>
@@ -28,7 +28,7 @@ get_header();
       <?php get_template_part( 'template-parts/content', 'skills' ); ?>
       <?php get_template_part( 'template-parts/content', 'other-skills' ); ?>
       <?php get_template_part( 'template-parts/content', 'projects' ); ?>
-      <div class="appear-up sep"><h2>Infos additionnelles...</h2></div>
+      <div class="appear-up sep"><h2><?php _e('Infos additionnelles','artcortijo'); ?></h2></div>
       <div class="grid-content col-2">
         <?php get_template_part( 'template-parts/content', 'qualities' ); ?>
         <?php get_template_part( 'template-parts/content', 'hobbies' ); ?>

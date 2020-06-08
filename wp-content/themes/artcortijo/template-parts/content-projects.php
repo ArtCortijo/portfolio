@@ -1,4 +1,4 @@
-<div class="appear-up sep"><h2>J'ai travaillé sur ces projets: </h2></div>
+<div class="appear-up sep"><h2><?php _e('J\'ai travaillé sur ces projets','artcortijo'); ?>: </h2></div>
 <section class="info projects">
   <div class="appear-up info__wrapper">
     <div class="grid-content">

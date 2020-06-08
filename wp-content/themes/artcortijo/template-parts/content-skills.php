@@ -1,7 +1,7 @@
 <section class="info skills">
   <div class="appear-up info__wrapper">
     <div class="grid-content col-1">
-      <div class="info__title anim-bkg"><h3>Compétences Professionnelles</h3></div>
+      <div class="info__title anim-bkg"><h3><?php _e('Compétences Professionnelles','artcortijo'); ?></h3></div>
       <dl class="list-col-2">
         <dt>HTML5/CSS3</dt>
         <dt>Less/SCSS</dt>

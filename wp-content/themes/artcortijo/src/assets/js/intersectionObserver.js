@@ -58,16 +58,18 @@ const intersectionAnim = () => {
   };
 
   const myImg = document.querySelector('#site-banner');
-  let bannerObserver = new IntersectionObserver((entry, bannerObserver) => {
-    if (
-      !entry[0].target.classList.contains('active') &&
-      entry[0].intersectionRatio > 0
-    ) {
-      animBanner();
-      bannerObserver.unobserve(entry[0].target);
-    }
-  });
-  bannerObserver.observe(myImg);
+  if (myImg) {
+    let bannerObserver = new IntersectionObserver((entry, bannerObserver) => {
+      if (
+        !entry[0].target.classList.contains('active') &&
+        entry[0].intersectionRatio > 0
+      ) {
+        animBanner();
+        bannerObserver.unobserve(entry[0].target);
+      }
+    });
+    bannerObserver.observe(myImg);
+  }
 };
 // End Banner
 

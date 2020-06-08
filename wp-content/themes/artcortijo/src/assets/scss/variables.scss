@@ -4,6 +4,7 @@ $black: #000;
 $appear-time: 1.5s;
 $appear-time-quick: 1s;
 $color-theme: 0.75s ease;
+$link-time: 0.5s ease;
 
 html {
   --bg2: #ffffff;
@@ -23,6 +24,8 @@ html[data-theme='dark'] {
   --grad1: #09e485;
   --grad2: #0291e3;
 }
+
+$test: var(--color1);
 
 $linkedin: #0177b5;
 // Dark Theme Colors

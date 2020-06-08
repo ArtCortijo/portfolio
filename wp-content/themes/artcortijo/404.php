@@ -10,51 +10,16 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'artcortijo' ); ?></h1>
-				</header><!-- .page-header -->
-
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'artcortijo' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'artcortijo' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$artcortijo_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'artcortijo' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$artcortijo_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+<div id="primary" class="content-area">
+	<main id="main" class="site-main">
+		<section class="error-404 not-found">
+			<h1 class=" text-gradient-opt1"><?php _e( "Page non trouvée", 'artcortijo' ); ?></h1>
+			<h2 class="error-404__text"><?php _e( "Oh. On dirait que vous avez pris un mauvais virage quelque part. Il n'y a rien à voir ici l'ami.", 'artcortijo' ); ?></h2>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="error-404__link link__text"><h2><?php _e( "Cliquez ici pour revenir à la page d'accueil", 'artcortijo' ); ?></h2></a>
+			<p><?php _e( "Ou vous pouvez également rester ici. C'est cool.", 'artcortijo' ); ?></p>
+		</section>
+	</main>
+</div>
 
 <?php
 get_footer();
