@@ -1,11 +1,29 @@
 section {
   padding: 50px 0;
+  @include media-below(sm) {
+    padding: 25px 0;
+  }
   &.other-skills {
     ul li {
       margin-bottom: 10px;
     }
     li ul {
       margin-top: 10px;
+    }
+    .info__title {
+      margin-bottom: 0;
+    }
+  }
+  &.skills {
+    .info__title {
+      margin-bottom: 0;
+    }
+  }
+  &.qualities,
+  &.hobbies,
+  &.languages {
+    @include media-below(md) {
+      padding: 25px 0;
     }
   }
   dt {
@@ -101,5 +119,14 @@ section {
     column-count: 2;
     column-gap: 50px;
     column-rule: 1px solid $light-four;
+  }
+}
+
+.col-3 {
+  .info__title {
+    width: 90%;
+    @include media-below(sm) {
+      width: 100%;
+    }
   }
 }

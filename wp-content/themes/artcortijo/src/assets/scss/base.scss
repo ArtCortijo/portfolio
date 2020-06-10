@@ -37,7 +37,7 @@ footer {
   width: 100%;
   margin: 0 auto;
   padding: 50px 40px;
-  @include media-below(sm) {
+  @include media-below(md) {
     padding: 40px 20px;
   }
 }
@@ -74,7 +74,7 @@ footer {
   width: 100%;
   margin: 0 auto;
   padding: 100px 40px 0;
-  @include media-below(sm) {
+  @include media-below(md) {
     padding: 50px 20px 0;
   }
 }
@@ -155,8 +155,22 @@ a:visited {
   }
 }
 
+.width-md {
+  width: 75%;
+  @include media-below(md) {
+    width: 90%;
+  }
+  @include media-below(sm) {
+    width: 100%;
+  }
+}
+
 .pad-bottom {
   padding-bottom: 10px;
+}
+
+.small-txt {
+  font-size: 0.8rem;
 }
 
 .clear {

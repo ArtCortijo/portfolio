@@ -9,7 +9,7 @@
         <dt>JavaScript</dt>
         <dt>ES6</dt>
         <dt>jQuery</dt>
-        <dt>TypeScript</dt>
+        <!-- <dt>TypeScript</dt> -->
         <dt>VueJS/VueX</dt>
         <dt>ReactJS/Redux</dt>
         <dt>Grunt</dt>

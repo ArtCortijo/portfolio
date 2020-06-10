@@ -5,7 +5,39 @@ section.contact {
     font-size: 2rem;
     text-transform: initial;
   }
-  .link {
+  h4 {
+    font-family: $font-base;
+    text-transform: initial;
+    margin-bottom: 30px;
+  }
+  svg {
+    display: inline-block;
+    fill: var(--color2);
+  }
+  a {
+    margin: 0 10px;
+    svg {
+      transition: fill $link-time;
+    }
+    &:hover {
+      svg {
+        fill: var(--color1);
+      }
+    }
+  }
+  .mail {
+    svg {
+      width: 53px;
+      height: 40px;
+    }
+  }
+  .linkedin {
+    svg {
+      width: 42px;
+      height: 42px;
+    }
+  }
+  .link.border {
     transform: translate(-5px, 18px);
     @include media-below(sm) {
       display: block;

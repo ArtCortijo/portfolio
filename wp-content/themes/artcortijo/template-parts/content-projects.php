@@ -1,6 +1,10 @@
-<div class="appear-up sep"><h2><?php _e('J\'ai travaillé sur ces projets','artcortijo'); ?>: </h2></div>
+<div class="appear-up sep">
+  <h2><?php _e('J\'ai travaillé sur ces projets','artcortijo'); ?>: </h2>
+  <p class="small-txt"><?php _e('*Malheureusement, certains projets ne sont pas disponible en ligne (projets interne, concours saisonniers ou remplacé par une refonte).','artcortijo'); ?></p>
+</div>
 <section class="info projects">
   <div class="appear-up info__wrapper">
+    
     <div class="grid-content">
       <?php
         $args = array(

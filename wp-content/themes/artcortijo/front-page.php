@@ -29,9 +29,10 @@ get_header();
       <?php get_template_part( 'template-parts/content', 'other-skills' ); ?>
       <?php get_template_part( 'template-parts/content', 'projects' ); ?>
       <div class="appear-up sep"><h2><?php _e('Infos additionnelles','artcortijo'); ?></h2></div>
-      <div class="grid-content col-2">
+      <div class="grid-content col-3">
         <?php get_template_part( 'template-parts/content', 'qualities' ); ?>
         <?php get_template_part( 'template-parts/content', 'hobbies' ); ?>
+        <?php get_template_part( 'template-parts/content', 'languages' ); ?>
       </div>
       <?php get_template_part( 'template-parts/content', 'contact' ); ?>
     <?php endwhile; // End of the loop. ?>

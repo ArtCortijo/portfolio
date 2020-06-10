@@ -1,12 +1,11 @@
 .link {
   position: relative;
   color: inherit;
-  &__text {
+  &__underline {
+    position: relative;
     display: inline-block;
     z-index: 1;
-    & * {
-      position: relative;
-    }
+    color: var(--color2);
     &::before {
       position: absolute;
       content: '';
@@ -18,9 +17,15 @@
       transform-origin: bottom left;
       transform: scaleY(0.14) translate(-5px, 0);
       transition: transform $link-time;
-      z-index: 0;
+      z-index: -1;
     }
     &:hover {
+      color: #fff;
+      &::before {
+        transform: scaleY(1) translate(0, 0);
+      }
+    }
+    @include media-below(md) {
       color: #fff;
       &::before {
         transform: scaleY(1) translate(0, 0);

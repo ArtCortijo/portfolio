@@ -8,7 +8,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2020-06-08 04:59-0400\n"
+"PO-Revision-Date: 2020-06-09 12:19-0400\n"
 "Last-Translator: \n"
 "X-Generator: Poedit 2.3.1\n"
 "Language-Team: \n"
@@ -112,13 +112,13 @@ msgid "Pendant mes temps libres (beaucoup de temps libre ces temps-ci...merci co
 msgstr "During my free time (a lot of free time these days ... thanks covid-19), I like to"
 
 msgid "Coder"
-msgstr "Coding"
+msgstr "Code"
 
 msgid "Courir"
-msgstr "Run"
+msgstr "Go for a run"
 
 msgid "Voyager (quand il n'y a pas de pandémie)"
-msgstr "Traveling (when there is no pandemic)"
+msgstr "Travel (when there is no pandemic)"
 
 msgid "Me renseigner/essayer de nouvelles technos"
 msgstr "Learn / try new tech"
@@ -132,13 +132,43 @@ msgstr "Some people have said that I am"
 msgid "Vous pouvez me contacter sur"
 msgstr "You can contact me on"
 
+msgid "courriel"
+msgstr "email"
+
+msgid "Si vous souhaitez me contacter, vous pouvez m'envoyer un"
+msgstr "If you'd like to get in touch with me, you can send me an"
+
+msgid "ou me contacter sur"
+msgstr "or you can contact me on"
+
+msgid "Vous pouvez me contacter par courriel ou LinkedIn"
+msgstr "You can contact me through email or LinkedIn"
+
+msgid "Langues"
+msgstr "Languages"
+
+msgid "Je parle couramment ces langues"
+msgstr "I'm fluent in all these languages"
+
+msgid "Français"
+msgstr "French"
+
+msgid "Anglais"
+msgstr "English"
+
+msgid "Espagnol"
+msgstr "Spanish"
+
+msgid "*Malheureusement, certains projets ne sont pas disponible en ligne (projets interne, concours saisonniers ou remplacé par une refonte)."
+msgstr "Unfortunately, some of my projects are no longer available online (internal projects, seasonal contests or they have already been redesigned)."
+
 #: 404
 msgid "Page non trouvée"
 msgstr "Page not found"
 
 #: 404
 msgid "Oh. On dirait que vous avez pris un mauvais virage quelque part. Il n'y a rien à voir ici l'ami."
-msgstr "Oh. Looks like you took a wrong turn somewhere. There's nothing to see here ,friend."
+msgstr "Oh. Looks like you took a wrong turn somewhere. There's nothing to see here, friend."
 
 #: 404
 msgid "Cliquez ici pour revenir à la page d'accueil"

@@ -11,14 +11,14 @@ section.projects {
   .project {
     color: $white;
     overflow: hidden;
-    @include media-below(sm) {
+    @include media-below(md) {
       display: block;
       width: 100%;
       margin-bottom: 30px;
       min-height: 300px;
       height: auto;
     }
-    @include media-above(sm) {
+    @include media-above(md) {
       &:hover {
         .project__wrapper {
           &::before {
@@ -69,7 +69,7 @@ section.projects {
         transition: border-color 0.5s ease, transform 0.5s ease;
         z-index: 2;
       }
-      @include media-below(sm) {
+      @include media-below(md) {
         &::before {
           background-color: rgba(0, 0, 0, 0.8);
         }
@@ -119,7 +119,7 @@ section.projects {
     &__title {
       line-height: 1.2;
       transition: transform 0.5s ease;
-      @include media-above(sm) {
+      @include media-above(md) {
         transform: translateY(-30px);
       }
     }

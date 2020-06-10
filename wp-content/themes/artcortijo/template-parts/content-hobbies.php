@@ -1,7 +1,7 @@
 <section class="info hobbies">
   <div class="appear-up info__wrapper">
     <h4 class="info__title"><?php _e('Loisirs & Intérêts','artcortijo'); ?></h4>
-    <p class="pad-bottom"><?php _e('Pendant mes temps libres (beaucoup de temps libre ces temps-ci...merci covid-19), j\'aime bien', 'artcortijo'); ?> : </p>
+    <p class="pad-bottom width-md"><?php _e('Pendant mes temps libres (beaucoup de temps libre ces temps-ci...merci covid-19), j\'aime bien', 'artcortijo'); ?>&nbsp;:</p>
     <dl>
       <dt><?php _e('Coder','artcortijo'); ?></dt>
       <dt><?php _e('Courir','artcortijo'); ?></dt>
